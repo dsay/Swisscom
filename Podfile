@@ -8,6 +8,10 @@ workspace 'Swisscom'
 
 target :Swisscom do
     xcodeproj 'Swisscom'
+    
+    pod 'AFNetworking', '~>2.5.0'
+    pod 'libextobjc/EXTScope'
+    pod 'Reachability'
 
 end
 

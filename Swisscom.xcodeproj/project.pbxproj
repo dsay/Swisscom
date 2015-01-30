@@ -14,6 +14,13 @@
 		328ECB991A7BD6010059FACC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 328ECB981A7BD6010059FACC /* Images.xcassets */; };
 		328ECB9C1A7BD6010059FACC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 328ECB9A1A7BD6010059FACC /* LaunchScreen.xib */; };
 		328ECBA81A7BD6010059FACC /* SwisscomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBA71A7BD6010059FACC /* SwisscomTests.m */; };
+		328ECBB51A7BD9580059FACC /* EventSynchronizationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBB41A7BD9580059FACC /* EventSynchronizationService.m */; };
+		328ECBBF1A7BDA670059FACC /* ContextProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBB91A7BDA670059FACC /* ContextProvider.m */; };
+		328ECBC01A7BDA670059FACC /* DataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBBB1A7BDA670059FACC /* DataStorage.m */; };
+		328ECBC11A7BDA670059FACC /* DataStorageRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBBE1A7BDA670059FACC /* DataStorageRequestBuilder.m */; };
+		328ECBC51A7BDC670059FACC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBC31A7BDC670059FACC /* Model.xcdatamodeld */; };
+		328ECBC81A7BDD080059FACC /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBC71A7BDD080059FACC /* ApiClient.m */; };
+		89D1EE16A400FE72AD707321 /* libPods-Swisscom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C5C2CF30E166BD9380F861 /* libPods-Swisscom.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +47,22 @@
 		328ECBA11A7BD6010059FACC /* SwisscomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwisscomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		328ECBA61A7BD6010059FACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		328ECBA71A7BD6010059FACC /* SwisscomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwisscomTests.m; sourceTree = "<group>"; };
+		328ECBB31A7BD9580059FACC /* EventSynchronizationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventSynchronizationService.h; sourceTree = "<group>"; };
+		328ECBB41A7BD9580059FACC /* EventSynchronizationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventSynchronizationService.m; sourceTree = "<group>"; };
+		328ECBB71A7BDA040059FACC /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		328ECBB81A7BDA670059FACC /* ContextProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextProvider.h; sourceTree = "<group>"; };
+		328ECBB91A7BDA670059FACC /* ContextProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextProvider.m; sourceTree = "<group>"; };
+		328ECBBA1A7BDA670059FACC /* DataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStorage.h; sourceTree = "<group>"; };
+		328ECBBB1A7BDA670059FACC /* DataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStorage.m; sourceTree = "<group>"; };
+		328ECBBC1A7BDA670059FACC /* DataStorageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStorageProtocol.h; sourceTree = "<group>"; };
+		328ECBBD1A7BDA670059FACC /* DataStorageRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStorageRequestBuilder.h; sourceTree = "<group>"; };
+		328ECBBE1A7BDA670059FACC /* DataStorageRequestBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStorageRequestBuilder.m; sourceTree = "<group>"; };
+		328ECBC41A7BDC670059FACC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		328ECBC61A7BDD080059FACC /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
+		328ECBC71A7BDD080059FACC /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
+		75A5EE3817BEC3B48B5C2964 /* Pods-Swisscom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swisscom.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swisscom/Pods-Swisscom.release.xcconfig"; sourceTree = "<group>"; };
+		7DBE39FD7370043E631BDB30 /* Pods-Swisscom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swisscom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swisscom/Pods-Swisscom.debug.xcconfig"; sourceTree = "<group>"; };
+		D8C5C2CF30E166BD9380F861 /* libPods-Swisscom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Swisscom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D1EE16A400FE72AD707321 /* libPods-Swisscom.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +84,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D472879D20B90720DD65253 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8C5C2CF30E166BD9380F861 /* libPods-Swisscom.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		328ECB7F1A7BD6010059FACC = {
 			isa = PBXGroup;
 			children = (
 				328ECB8A1A7BD6010059FACC /* Swisscom */,
 				328ECBA41A7BD6010059FACC /* SwisscomTests */,
 				328ECB891A7BD6010059FACC /* Products */,
+				A336AF8635DB0B4B89908E1E /* Pods */,
+				2D472879D20B90720DD65253 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +115,10 @@
 		328ECB8A1A7BD6010059FACC /* Swisscom */ = {
 			isa = PBXGroup;
 			children = (
+				328ECBC21A7BDC5D0059FACC /* Models */,
+				328ECBB61A7BD9EA0059FACC /* Utils */,
+				328ECBB21A7BD9240059FACC /* DataBase */,
+				328ECBB11A7BD91D0059FACC /* Networking */,
 				328ECB8F1A7BD6010059FACC /* AppDelegate.h */,
 				328ECB901A7BD6010059FACC /* AppDelegate.m */,
 				328ECB921A7BD6010059FACC /* ViewController.h */,
@@ -119,6 +157,56 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		328ECBB11A7BD91D0059FACC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				328ECBC61A7BDD080059FACC /* ApiClient.h */,
+				328ECBC71A7BDD080059FACC /* ApiClient.m */,
+				328ECBB31A7BD9580059FACC /* EventSynchronizationService.h */,
+				328ECBB41A7BD9580059FACC /* EventSynchronizationService.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		328ECBB21A7BD9240059FACC /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				328ECBB81A7BDA670059FACC /* ContextProvider.h */,
+				328ECBB91A7BDA670059FACC /* ContextProvider.m */,
+				328ECBBA1A7BDA670059FACC /* DataStorage.h */,
+				328ECBBB1A7BDA670059FACC /* DataStorage.m */,
+				328ECBBC1A7BDA670059FACC /* DataStorageProtocol.h */,
+				328ECBBD1A7BDA670059FACC /* DataStorageRequestBuilder.h */,
+				328ECBBE1A7BDA670059FACC /* DataStorageRequestBuilder.m */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		328ECBB61A7BD9EA0059FACC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				328ECBB71A7BDA040059FACC /* Singleton.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		328ECBC21A7BDC5D0059FACC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				328ECBC31A7BDC670059FACC /* Model.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A336AF8635DB0B4B89908E1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DBE39FD7370043E631BDB30 /* Pods-Swisscom.debug.xcconfig */,
+				75A5EE3817BEC3B48B5C2964 /* Pods-Swisscom.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 328ECBAB1A7BD6010059FACC /* Build configuration list for PBXNativeTarget "Swisscom" */;
 			buildPhases = (
+				A2846018C7745CC7CEC58EF7 /* Check Pods Manifest.lock */,
 				328ECB841A7BD6010059FACC /* Sources */,
 				328ECB851A7BD6010059FACC /* Frameworks */,
 				328ECB861A7BD6010059FACC /* Resources */,
+				319790EF42FE50D2A9DE0DE5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,14 +304,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		319790EF42FE50D2A9DE0DE5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swisscom/Pods-Swisscom-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2846018C7745CC7CEC58EF7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		328ECB841A7BD6010059FACC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				328ECBBF1A7BDA670059FACC /* ContextProvider.m in Sources */,
+				328ECBC81A7BDD080059FACC /* ApiClient.m in Sources */,
 				328ECB941A7BD6010059FACC /* ViewController.m in Sources */,
 				328ECB911A7BD6010059FACC /* AppDelegate.m in Sources */,
+				328ECBC51A7BDC670059FACC /* Model.xcdatamodeld in Sources */,
+				328ECBC11A7BDA670059FACC /* DataStorageRequestBuilder.m in Sources */,
 				328ECB8E1A7BD6010059FACC /* main.m in Sources */,
+				328ECBB51A7BD9580059FACC /* EventSynchronizationService.m in Sources */,
+				328ECBC01A7BDA670059FACC /* DataStorage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +472,7 @@
 		};
 		328ECBAC1A7BD6010059FACC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DBE39FD7370043E631BDB30 /* Pods-Swisscom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Swisscom/Info.plist;
@@ -353,6 +483,7 @@
 		};
 		328ECBAD1A7BD6010059FACC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75A5EE3817BEC3B48B5C2964 /* Pods-Swisscom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Swisscom/Info.plist;
@@ -414,6 +545,7 @@
 				328ECBAD1A7BD6010059FACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		328ECBAE1A7BD6010059FACC /* Build configuration list for PBXNativeTarget "SwisscomTests" */ = {
 			isa = XCConfigurationList;
@@ -422,8 +554,22 @@
 				328ECBB01A7BD6010059FACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		328ECBC31A7BDC670059FACC /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				328ECBC41A7BDC670059FACC /* Model.xcdatamodel */,
+			);
+			currentVersion = 328ECBC41A7BDC670059FACC /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 328ECB801A7BD6010059FACC /* Project object */;
 }

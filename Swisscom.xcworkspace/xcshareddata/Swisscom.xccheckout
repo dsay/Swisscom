@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>40D635C0-82C9-44C9-A60D-D6E924675519</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Swisscom</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>029935422920B9F4C6261D6E00F83D12C5036671</key>
+		<string>github.com:dsay/Swisscom.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Swisscom.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>029935422920B9F4C6261D6E00F83D12C5036671</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:dsay/Swisscom.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>029935422920B9F4C6261D6E00F83D12C5036671</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>029935422920B9F4C6261D6E00F83D12C5036671</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Swisscom</string>
+		</dict>
+	</array>
+</dict>
+</plist>
