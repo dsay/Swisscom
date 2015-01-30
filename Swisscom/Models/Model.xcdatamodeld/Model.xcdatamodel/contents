@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C106a" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="SWAnswer" representedClassName="SWAnswer" syncable="YES">
+        <attribute name="qustionId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="variantId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="respounse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SWRespounse" inverseName="answers" inverseEntity="SWRespounse" syncable="YES"/>
+    </entity>
+    <entity name="SWQuestion" representedClassName="SWQuestion" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qustionId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="variats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SWVariant" inverseName="qustion" inverseEntity="SWVariant" syncable="YES"/>
+    </entity>
+    <entity name="SWRespounse" representedClassName="SWRespounse" syncable="YES">
+        <relationship name="answers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SWAnswer" inverseName="respounse" inverseEntity="SWAnswer" syncable="YES"/>
+        <relationship name="timingEvent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SWRespounseTimingEvent" inverseName="respounse" inverseEntity="SWRespounseTimingEvent" syncable="YES"/>
+    </entity>
+    <entity name="SWRespounseTimingEvent" representedClassName="SWRespounseTimingEvent" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="respounse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SWRespounse" inverseName="timingEvent" inverseEntity="SWRespounse" syncable="YES"/>
+    </entity>
+    <entity name="SWVariant" representedClassName="SWVariant" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="variantId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="qustion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SWQuestion" inverseName="variats" inverseEntity="SWQuestion" syncable="YES"/>
+    </entity>
     <configuration name="AutorizationUser"/>
-    <configuration name="UnAutorizationUser"/>
-    <elements/>
+    <configuration name="UnAutorizationUser">
+        <memberEntity name="SWAnswer"/>
+        <memberEntity name="SWQuestion"/>
+        <memberEntity name="SWRespounse"/>
+        <memberEntity name="SWRespounseTimingEvent"/>
+        <memberEntity name="SWVariant"/>
+    </configuration>
+    <elements>
+        <element name="SWAnswer" positionX="63" positionY="135" width="128" height="88"/>
+        <element name="SWRespounse" positionX="-171" positionY="162" width="128" height="73"/>
+        <element name="SWVariant" positionX="34" positionY="18" width="128" height="103"/>
+        <element name="SWQuestion" positionX="-173" positionY="18" width="128" height="103"/>
+        <element name="SWRespounseTimingEvent" positionX="-47" positionY="296" width="128" height="73"/>
+    </elements>
 </model>
