@@ -12,7 +12,7 @@ target :Swisscom do
     pod 'AFNetworking', '~>2.5.0'
     pod 'libextobjc/EXTScope'
     pod 'Reachability'
-
+    pod 'OHHTTPStubs'
 end
 
 

@@ -20,11 +20,11 @@
 		328ECBC11A7BDA670059FACC /* DataStorageRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBBE1A7BDA670059FACC /* DataStorageRequestBuilder.m */; };
 		328ECBC51A7BDC670059FACC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBC31A7BDC670059FACC /* Model.xcdatamodeld */; };
 		328ECBC81A7BDD080059FACC /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBC71A7BDD080059FACC /* ApiClient.m */; };
-		328ECBCB1A7BE3A10059FACC /* SWAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBCA1A7BE3A10059FACC /* SWAnswer.m */; };
-		328ECBCE1A7BE3A20059FACC /* SWVariant.m in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBCD1A7BE3A20059FACC /* SWVariant.m */; };
-		328ECBD11A7BE3A20059FACC /* SWQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBD01A7BE3A20059FACC /* SWQuestion.m */; };
-		328ECBD41A7BE3A20059FACC /* SWRespounse.m in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBD31A7BE3A20059FACC /* SWRespounse.m */; };
-		328ECBD71A7BE3A20059FACC /* SWRespounseTimingEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBD61A7BE3A20059FACC /* SWRespounseTimingEvent.m */; };
+		32FE79BF1A7BE7E20027B946 /* SWAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79BE1A7BE7E20027B946 /* SWAnswer.m */; };
+		32FE79C21A7BE7E20027B946 /* SWQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79C11A7BE7E20027B946 /* SWQuestion.m */; };
+		32FE79C51A7BE7E20027B946 /* SWResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79C41A7BE7E20027B946 /* SWResponse.m */; };
+		32FE79C81A7BE7E20027B946 /* SWResultTimingEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79C71A7BE7E20027B946 /* SWResultTimingEvent.m */; };
+		32FE79CB1A7BE7E20027B946 /* SWResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79CA1A7BE7E20027B946 /* SWResult.m */; };
 		89D1EE16A400FE72AD707321 /* libPods-Swisscom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C5C2CF30E166BD9380F861 /* libPods-Swisscom.a */; };
 /* End PBXBuildFile section */
 
@@ -65,16 +65,16 @@
 		328ECBC41A7BDC670059FACC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		328ECBC61A7BDD080059FACC /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
 		328ECBC71A7BDD080059FACC /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
-		328ECBC91A7BE3A10059FACC /* SWAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWAnswer.h; sourceTree = "<group>"; };
-		328ECBCA1A7BE3A10059FACC /* SWAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWAnswer.m; sourceTree = "<group>"; };
-		328ECBCC1A7BE3A20059FACC /* SWVariant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWVariant.h; sourceTree = "<group>"; };
-		328ECBCD1A7BE3A20059FACC /* SWVariant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWVariant.m; sourceTree = "<group>"; };
-		328ECBCF1A7BE3A20059FACC /* SWQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQuestion.h; sourceTree = "<group>"; };
-		328ECBD01A7BE3A20059FACC /* SWQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQuestion.m; sourceTree = "<group>"; };
-		328ECBD21A7BE3A20059FACC /* SWRespounse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRespounse.h; sourceTree = "<group>"; };
-		328ECBD31A7BE3A20059FACC /* SWRespounse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRespounse.m; sourceTree = "<group>"; };
-		328ECBD51A7BE3A20059FACC /* SWRespounseTimingEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRespounseTimingEvent.h; sourceTree = "<group>"; };
-		328ECBD61A7BE3A20059FACC /* SWRespounseTimingEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRespounseTimingEvent.m; sourceTree = "<group>"; };
+		32FE79BD1A7BE7E20027B946 /* SWAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWAnswer.h; sourceTree = "<group>"; };
+		32FE79BE1A7BE7E20027B946 /* SWAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWAnswer.m; sourceTree = "<group>"; };
+		32FE79C01A7BE7E20027B946 /* SWQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQuestion.h; sourceTree = "<group>"; };
+		32FE79C11A7BE7E20027B946 /* SWQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQuestion.m; sourceTree = "<group>"; };
+		32FE79C31A7BE7E20027B946 /* SWResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWResponse.h; sourceTree = "<group>"; };
+		32FE79C41A7BE7E20027B946 /* SWResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWResponse.m; sourceTree = "<group>"; };
+		32FE79C61A7BE7E20027B946 /* SWResultTimingEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWResultTimingEvent.h; sourceTree = "<group>"; };
+		32FE79C71A7BE7E20027B946 /* SWResultTimingEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWResultTimingEvent.m; sourceTree = "<group>"; };
+		32FE79C91A7BE7E20027B946 /* SWResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWResult.h; sourceTree = "<group>"; };
+		32FE79CA1A7BE7E20027B946 /* SWResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWResult.m; sourceTree = "<group>"; };
 		75A5EE3817BEC3B48B5C2964 /* Pods-Swisscom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swisscom.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swisscom/Pods-Swisscom.release.xcconfig"; sourceTree = "<group>"; };
 		7DBE39FD7370043E631BDB30 /* Pods-Swisscom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swisscom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swisscom/Pods-Swisscom.debug.xcconfig"; sourceTree = "<group>"; };
 		D8C5C2CF30E166BD9380F861 /* libPods-Swisscom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Swisscom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,16 +209,16 @@
 			isa = PBXGroup;
 			children = (
 				328ECBC31A7BDC670059FACC /* Model.xcdatamodeld */,
-				328ECBD51A7BE3A20059FACC /* SWRespounseTimingEvent.h */,
-				328ECBD61A7BE3A20059FACC /* SWRespounseTimingEvent.m */,
-				328ECBD21A7BE3A20059FACC /* SWRespounse.h */,
-				328ECBD31A7BE3A20059FACC /* SWRespounse.m */,
-				328ECBCF1A7BE3A20059FACC /* SWQuestion.h */,
-				328ECBD01A7BE3A20059FACC /* SWQuestion.m */,
-				328ECBCC1A7BE3A20059FACC /* SWVariant.h */,
-				328ECBCD1A7BE3A20059FACC /* SWVariant.m */,
-				328ECBC91A7BE3A10059FACC /* SWAnswer.h */,
-				328ECBCA1A7BE3A10059FACC /* SWAnswer.m */,
+				32FE79C91A7BE7E20027B946 /* SWResult.h */,
+				32FE79CA1A7BE7E20027B946 /* SWResult.m */,
+				32FE79C61A7BE7E20027B946 /* SWResultTimingEvent.h */,
+				32FE79C71A7BE7E20027B946 /* SWResultTimingEvent.m */,
+				32FE79C31A7BE7E20027B946 /* SWResponse.h */,
+				32FE79C41A7BE7E20027B946 /* SWResponse.m */,
+				32FE79C01A7BE7E20027B946 /* SWQuestion.h */,
+				32FE79C11A7BE7E20027B946 /* SWQuestion.m */,
+				32FE79BD1A7BE7E20027B946 /* SWAnswer.h */,
+				32FE79BE1A7BE7E20027B946 /* SWAnswer.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -367,20 +367,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32FE79C81A7BE7E20027B946 /* SWResultTimingEvent.m in Sources */,
+				32FE79C51A7BE7E20027B946 /* SWResponse.m in Sources */,
 				328ECBBF1A7BDA670059FACC /* ContextProvider.m in Sources */,
 				328ECBC81A7BDD080059FACC /* ApiClient.m in Sources */,
+				32FE79CB1A7BE7E20027B946 /* SWResult.m in Sources */,
 				328ECB941A7BD6010059FACC /* ViewController.m in Sources */,
 				328ECB911A7BD6010059FACC /* AppDelegate.m in Sources */,
+				32FE79C21A7BE7E20027B946 /* SWQuestion.m in Sources */,
 				328ECBC51A7BDC670059FACC /* Model.xcdatamodeld in Sources */,
-				328ECBD71A7BE3A20059FACC /* SWRespounseTimingEvent.m in Sources */,
 				328ECBC11A7BDA670059FACC /* DataStorageRequestBuilder.m in Sources */,
 				328ECB8E1A7BD6010059FACC /* main.m in Sources */,
-				328ECBCE1A7BE3A20059FACC /* SWVariant.m in Sources */,
 				328ECBB51A7BD9580059FACC /* EventSynchronizationService.m in Sources */,
-				328ECBD11A7BE3A20059FACC /* SWQuestion.m in Sources */,
 				328ECBC01A7BDA670059FACC /* DataStorage.m in Sources */,
-				328ECBCB1A7BE3A10059FACC /* SWAnswer.m in Sources */,
-				328ECBD41A7BE3A20059FACC /* SWRespounse.m in Sources */,
+				32FE79BF1A7BE7E20027B946 /* SWAnswer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ApiClient)
 {
     if (self = [super initWithBaseURL:[NSURL URLWithString:@""]]) {
         self.requestSerializer = [AFJSONRequestSerializer serializer];
-        self.responseSerializer = [AFJSONResponseSerializer serializer];
+        self.responseSerializer = [AFHTTPResponseSerializer serializer];
         [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
         [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     }
