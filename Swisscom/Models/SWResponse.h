@@ -1,5 +1,5 @@
 //
-//  SWAnswer.h
+//  SWResponse.h
 //  Swisscom
 //
 //  Created by Dima on 1/30/15.
@@ -9,13 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class SWQuestion;
+@class SWResult;
 
-@interface SWAnswer : NSManagedObject
+@interface SWResponse : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * answerId;
-@property (nonatomic, retain) NSString * image;
-@property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) SWQuestion *qustion;
+@property (nonatomic, retain) NSNumber * qustionId;
+@property (nonatomic, retain) SWResult *result;
 
 @end
