@@ -9,6 +9,8 @@
 @property (nonatomic, retain) NSNumber * qustionId;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSSet *answers;
+@property (nonatomic, retain) NSData *imageData;
+
 @end
 
 @interface SWQuestion (CoreDataGeneratedAccessors)

@@ -32,7 +32,7 @@
 
     [self questionsStub];
     [self resultsStub];
-
+    
     return YES;
 }
 

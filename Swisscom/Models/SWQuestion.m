@@ -8,5 +8,6 @@
 @dynamic qustionId;
 @dynamic title;
 @dynamic answers;
+@dynamic imageData;
 
 @end

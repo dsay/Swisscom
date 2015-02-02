@@ -29,6 +29,12 @@ static NSString * const kAnswers = @"answers";
         questionObject.title = [questionMapper stringFromKey:kTitle];
         questionObject.image = [questionMapper stringFromKey:kImage];
         
+        if (questionObject.image)
+        {
+            NSData *imageData = [self loadData:questionObject.image];
+            questionObject.imageData = imageData;
+        }
+        
         NSArray *answers = [questionMapper arrayFromKey:kAnswers];
         for (NSDictionary *answer in answers)
         {
@@ -41,9 +47,22 @@ static NSString * const kAnswers = @"answers";
             answerObject.title = [answerMapper stringFromKey:kTitle];
             answerObject.image = [answerMapper stringFromKey:kImage];
             
+            if (answerObject.image)
+            {
+                NSData *imageData = [self loadData:answerObject.image];
+                answerObject.imageData = imageData;
+            }
+            
             [questionObject addAnswersObject:answerObject];
         }
+        
     }
+}
+
++ (NSData *)loadData:(NSString *)url
+{
+    NSData * imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    return imageData;
 }
 
 @end
