@@ -11,19 +11,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    [[SynchronizationService shared] startSynchronizationSuccess:^(BOOL success) {
-        [self fetchData];
-    }];
     
-    [self fetchData];
+    NSArray *question = [self fetchData];
+    if (question.count)
+    {
+//        Update UI
+    }
+    else
+    {
+//     Start Spiner
+        [[SynchronizationService shared] startSynchronizationSuccess:^(BOOL success) {
+           NSArray *question = [self fetchData];
+            if (success && question.count)
+            {
+//                  Update UI
+            }
+            else
+            {
+//                  ERROR
+            }
+//          Stop Spiner
+        }];
+    }
 }
 
-- (void)fetchData
+- (NSArray *)fetchData
 {
     DataStorage *dataStorage = [DataStorage shared];
     NSFetchRequest *request = [dataStorage.requestBuilder questions];
-    NSArray *question = [dataStorage performFetchRequest:request];
+    return [dataStorage performFetchRequest:request];
 }
 
 @end
