@@ -87,7 +87,13 @@
     self.dataSource.completionHandler = ^(UserResult *result) {
         [result save];
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Questionnaire rusults are saved!" message:nil preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            weakSelf.dataSource.question = questions[0];
+            weakSelf.dataSource.selectedQuestionIndex = 0;
+            weakSelf.backButtonItem.enabled = NO;
+            weakSelf.dataSource.result = [UserResult new];
+            [weakSelf.collectionView reloadData];
+        }]];
         [weakSelf presentViewController:alertController animated:YES completion:nil];
     };
     self.collectionView.dataSource = self.dataSource;

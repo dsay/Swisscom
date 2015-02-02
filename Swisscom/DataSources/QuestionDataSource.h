@@ -15,7 +15,7 @@
 @property (nonatomic, strong) SWQuestion *question;
 @property (nonatomic, assign) NSInteger selectedQuestionIndex;
 @property (nonatomic, copy) NSArray *questions;
-@property (nonatomic, readonly) UserResult *result;
+@property (nonatomic, strong) UserResult *result;
 @property (nonatomic, copy) void (^completionHandler)(UserResult *result);
 
 - (instancetype)initWithQuestions:(NSArray *)questions;

@@ -98,7 +98,8 @@
     cell.frame = frame;
     
     [cell layoutIfNeeded];
-    return [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    return size;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView sizeFittingSize:(CGSize)fittingSize forSupplementaryViewOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
