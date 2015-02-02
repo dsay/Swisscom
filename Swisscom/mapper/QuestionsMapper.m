@@ -2,12 +2,17 @@
 #import "DPDataMapper.h"
 #import "SWQuestion.h"
 #import "SWAnswer.h"
+#import "SWScore.h"
 
 static NSString * const kQuestions = @"questions";
 static NSString * const kID = @"id";
 static NSString * const kTitle = @"title";
 static NSString * const kImage = @"image";
 static NSString * const kAnswers = @"answers";
+static NSString * const kScore = @"score";
+static NSString * const kMin = @"min";
+static NSString * const kMax = @"max";
+static NSString * const kValue = @"value";
 
 @implementation QuestionsMapper
 
@@ -34,6 +39,15 @@ static NSString * const kAnswers = @"answers";
             NSData *imageData = [self loadData:questionObject.image];
             questionObject.imageData = imageData;
         }
+        
+        SWScore *scoreObject = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass(SWScore.class)
+                                                                   inManagedObjectContext:context];
+        DPDataMapper *scoreMapper = [DPDataMapper new];
+        scoreMapper.response = [questionMapper dictionaryForKey:kScore];;
+        scoreObject.min = [scoreMapper integerFromKey:kMin];
+        scoreObject.max = [scoreMapper integerFromKey:kMax];
+        scoreObject.value = [scoreMapper integerFromKey:kValue];
+        questionObject.score = scoreObject;
         
         NSArray *answers = [questionMapper arrayFromKey:kAnswers];
         for (NSDictionary *answer in answers)

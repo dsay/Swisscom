@@ -27,7 +27,12 @@
                                  "title": "Didn’t invest.",
                                  "image": "https://s3.eu-central-1.amazonaws.com/mdp-questions/q1_a4.png"
                                  }
-                                 ]
+                                 ],
+                     "score":{
+                     "min": 0,
+                     "max": 4,
+                     "value": 1
+                     }
                      },
                      {
                      "id": 2,
@@ -49,7 +54,12 @@
                                  "title": "Above 2/3",
                                  "image": ""
                                  }
-                                 ]
+                                 ],
+                     "score":{
+                     "min": 0,
+                     "max": 3,
+                     "value": 1
+                     }
                      },
                      {
                      "id": 3,
@@ -71,7 +81,12 @@
                                  "title": "Comfortable",
                                  "image": ""
                                  }
-                                 ]
+                                 ],
+                     "score":{
+                     "min": 0,
+                     "max": 3,
+                     "value": 0
+                     }
                      },
                      {
                      "id": 4,
@@ -98,7 +113,12 @@
                                  "title": "...can’t cover my expenses (asset depletion).",
                                  "image": ""
                                  }
-                                 ]
+                                 ],
+                     "score":{
+                     "min": 0,
+                     "max": 4,
+                     "value": 4
+                     }
                      }
                      ]
     }
