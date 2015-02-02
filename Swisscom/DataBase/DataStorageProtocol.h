@@ -7,7 +7,7 @@ typedef NSDictionary* (^DataStorageImportBlock)(NSManagedObjectContext* context)
 
 @protocol RequestBuilderProtocol <NSObject>
 
-- (NSFetchRequest *)allMessages;
+- (NSFetchRequest *)questions;
 
 @end
 

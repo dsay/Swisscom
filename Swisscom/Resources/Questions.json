@@ -1,7 +1,7 @@
 {
     "status" : "OK",
     "data" : {
-        "qustins":[
+        "questions":[
                    {
                    "id": 1,
                    "title": "Question 1 over here...",

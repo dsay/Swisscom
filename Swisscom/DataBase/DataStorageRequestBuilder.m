@@ -2,13 +2,9 @@
 
 @implementation DataStorageRequestBuilder
 
-- (NSFetchRequest *)allMessages
+- (NSFetchRequest *)questions
 {
-    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"Message"];
- 
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"createdAt" ascending:NO];
-    [request setSortDescriptors:@[sortDescriptor]];
-    
+    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"SWQuestion"];    
     return request;
 }
 

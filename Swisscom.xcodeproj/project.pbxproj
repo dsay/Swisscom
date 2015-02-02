@@ -29,6 +29,7 @@
 		32FE79DE1A7F645E0027B946 /* Questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 32FE79CD1A7F5E250027B946 /* Questions.json */; };
 		32FE79E21A7F68DC0027B946 /* DPDataMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79E11A7F68DC0027B946 /* DPDataMapper.m */; };
 		32FE79E51A7F69C80027B946 /* SynchronizationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79E41A7F69C80027B946 /* SynchronizationService.m */; };
+		32FE79E81A7F6E440027B946 /* QuestionsMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79E71A7F6E440027B946 /* QuestionsMapper.m */; };
 		89D1EE16A400FE72AD707321 /* libPods-Swisscom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C5C2CF30E166BD9380F861 /* libPods-Swisscom.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,8 @@
 		32FE79E11A7F68DC0027B946 /* DPDataMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDataMapper.m; sourceTree = "<group>"; };
 		32FE79E31A7F69C80027B946 /* SynchronizationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynchronizationService.h; sourceTree = "<group>"; };
 		32FE79E41A7F69C80027B946 /* SynchronizationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynchronizationService.m; sourceTree = "<group>"; };
+		32FE79E61A7F6E440027B946 /* QuestionsMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsMapper.h; sourceTree = "<group>"; };
+		32FE79E71A7F6E440027B946 /* QuestionsMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsMapper.m; sourceTree = "<group>"; };
 		75A5EE3817BEC3B48B5C2964 /* Pods-Swisscom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swisscom.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swisscom/Pods-Swisscom.release.xcconfig"; sourceTree = "<group>"; };
 		7DBE39FD7370043E631BDB30 /* Pods-Swisscom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swisscom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swisscom/Pods-Swisscom.debug.xcconfig"; sourceTree = "<group>"; };
 		D8C5C2CF30E166BD9380F861 /* libPods-Swisscom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Swisscom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,6 +256,8 @@
 			children = (
 				32FE79E01A7F68DC0027B946 /* DPDataMapper.h */,
 				32FE79E11A7F68DC0027B946 /* DPDataMapper.m */,
+				32FE79E61A7F6E440027B946 /* QuestionsMapper.h */,
+				32FE79E71A7F6E440027B946 /* QuestionsMapper.m */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 				328ECBC11A7BDA670059FACC /* DataStorageRequestBuilder.m in Sources */,
 				328ECB8E1A7BD6010059FACC /* main.m in Sources */,
 				32FE79DD1A7F62130027B946 /* ApiClient+Question.m in Sources */,
+				32FE79E81A7F6E440027B946 /* QuestionsMapper.m in Sources */,
 				328ECBB51A7BD9580059FACC /* EventSynchronizationService.m in Sources */,
 				328ECBC01A7BDA670059FACC /* DataStorage.m in Sources */,
 				32FE79BF1A7BE7E20027B946 /* SWAnswer.m in Sources */,

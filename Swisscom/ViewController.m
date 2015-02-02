@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "ApiClient+Question.h"
+#import "SynchronizationService.h"
+#import "DataStorage.h"
+
 @interface ViewController ()
 
 @end
@@ -17,11 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[ApiClient shared] questionsCompletion:^(NSDictionary *dict, NSString *error) {
-        
+    [[SynchronizationService shared] startSynchronizationSuccess:^(BOOL success) {
+        [self fetchData];
     }];
-    
+    [self fetchData];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)fetchData
+{
+    DataStorage *dataStorage = [DataStorage shared];
+    NSFetchRequest *request = [dataStorage.requestBuilder questions];
+    NSArray *questions = [dataStorage performFetchRequest:request];
+
 }
 
 - (void)didReceiveMemoryWarning {
