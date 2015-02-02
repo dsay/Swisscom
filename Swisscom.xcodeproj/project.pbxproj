@@ -23,11 +23,12 @@
 		32CFA0451A7F7AA000A7A78D /* ApiClient+Result.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CFA0441A7F7AA000A7A78D /* ApiClient+Result.m */; };
 		32CFA0471A7F7D1200A7A78D /* Results.json in Resources */ = {isa = PBXBuildFile; fileRef = 32CFA0461A7F7D0B00A7A78D /* Results.json */; };
 		32CFA04A1A7F7F7300A7A78D /* UserResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CFA0491A7F7F7300A7A78D /* UserResult.m */; };
-		32FE79BF1A7BE7E20027B946 /* SWAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79BE1A7BE7E20027B946 /* SWAnswer.m */; };
-		32FE79C21A7BE7E20027B946 /* SWQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79C11A7BE7E20027B946 /* SWQuestion.m */; };
-		32FE79C51A7BE7E20027B946 /* SWResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79C41A7BE7E20027B946 /* SWResponse.m */; };
-		32FE79C81A7BE7E20027B946 /* SWResultTimingEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79C71A7BE7E20027B946 /* SWResultTimingEvent.m */; };
-		32FE79CB1A7BE7E20027B946 /* SWResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79CA1A7BE7E20027B946 /* SWResult.m */; };
+		32CFA0501A7F930500A7A78D /* SWResultTimingEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CFA04F1A7F930500A7A78D /* SWResultTimingEvent.m */; };
+		32CFA0531A7F930500A7A78D /* SWScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CFA0521A7F930500A7A78D /* SWScore.m */; };
+		32CFA0561A7F930500A7A78D /* SWQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CFA0551A7F930500A7A78D /* SWQuestion.m */; };
+		32CFA0591A7F930500A7A78D /* SWResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CFA0581A7F930500A7A78D /* SWResponse.m */; };
+		32CFA05C1A7F930500A7A78D /* SWResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CFA05B1A7F930500A7A78D /* SWResult.m */; };
+		32CFA05F1A7F930600A7A78D /* SWAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CFA05E1A7F930600A7A78D /* SWAnswer.m */; };
 		32FE79DD1A7F62130027B946 /* ApiClient+Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79DC1A7F62130027B946 /* ApiClient+Question.m */; };
 		32FE79DE1A7F645E0027B946 /* Questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 32FE79CD1A7F5E250027B946 /* Questions.json */; };
 		32FE79E21A7F68DC0027B946 /* DPDataMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79E11A7F68DC0027B946 /* DPDataMapper.m */; };
@@ -85,16 +86,18 @@
 		32CFA0461A7F7D0B00A7A78D /* Results.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Results.json; sourceTree = "<group>"; };
 		32CFA0481A7F7F7300A7A78D /* UserResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserResult.h; sourceTree = "<group>"; };
 		32CFA0491A7F7F7300A7A78D /* UserResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserResult.m; sourceTree = "<group>"; };
-		32FE79BD1A7BE7E20027B946 /* SWAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWAnswer.h; sourceTree = "<group>"; };
-		32FE79BE1A7BE7E20027B946 /* SWAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWAnswer.m; sourceTree = "<group>"; };
-		32FE79C01A7BE7E20027B946 /* SWQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQuestion.h; sourceTree = "<group>"; };
-		32FE79C11A7BE7E20027B946 /* SWQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQuestion.m; sourceTree = "<group>"; };
-		32FE79C31A7BE7E20027B946 /* SWResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWResponse.h; sourceTree = "<group>"; };
-		32FE79C41A7BE7E20027B946 /* SWResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWResponse.m; sourceTree = "<group>"; };
-		32FE79C61A7BE7E20027B946 /* SWResultTimingEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWResultTimingEvent.h; sourceTree = "<group>"; };
-		32FE79C71A7BE7E20027B946 /* SWResultTimingEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWResultTimingEvent.m; sourceTree = "<group>"; };
-		32FE79C91A7BE7E20027B946 /* SWResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWResult.h; sourceTree = "<group>"; };
-		32FE79CA1A7BE7E20027B946 /* SWResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWResult.m; sourceTree = "<group>"; };
+		32CFA04E1A7F930500A7A78D /* SWResultTimingEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWResultTimingEvent.h; sourceTree = "<group>"; };
+		32CFA04F1A7F930500A7A78D /* SWResultTimingEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWResultTimingEvent.m; sourceTree = "<group>"; };
+		32CFA0511A7F930500A7A78D /* SWScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWScore.h; sourceTree = "<group>"; };
+		32CFA0521A7F930500A7A78D /* SWScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWScore.m; sourceTree = "<group>"; };
+		32CFA0541A7F930500A7A78D /* SWQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQuestion.h; sourceTree = "<group>"; };
+		32CFA0551A7F930500A7A78D /* SWQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQuestion.m; sourceTree = "<group>"; };
+		32CFA0571A7F930500A7A78D /* SWResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWResponse.h; sourceTree = "<group>"; };
+		32CFA0581A7F930500A7A78D /* SWResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWResponse.m; sourceTree = "<group>"; };
+		32CFA05A1A7F930500A7A78D /* SWResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWResult.h; sourceTree = "<group>"; };
+		32CFA05B1A7F930500A7A78D /* SWResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWResult.m; sourceTree = "<group>"; };
+		32CFA05D1A7F930600A7A78D /* SWAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWAnswer.h; sourceTree = "<group>"; };
+		32CFA05E1A7F930600A7A78D /* SWAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWAnswer.m; sourceTree = "<group>"; };
 		32FE79CD1A7F5E250027B946 /* Questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Questions.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		32FE79DB1A7F62130027B946 /* ApiClient+Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ApiClient+Question.h"; sourceTree = "<group>"; };
 		32FE79DC1A7F62130027B946 /* ApiClient+Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ApiClient+Question.m"; sourceTree = "<group>"; };
@@ -262,16 +265,18 @@
 			isa = PBXGroup;
 			children = (
 				328ECBC31A7BDC670059FACC /* Model.xcdatamodeld */,
-				32FE79C91A7BE7E20027B946 /* SWResult.h */,
-				32FE79CA1A7BE7E20027B946 /* SWResult.m */,
-				32FE79C61A7BE7E20027B946 /* SWResultTimingEvent.h */,
-				32FE79C71A7BE7E20027B946 /* SWResultTimingEvent.m */,
-				32FE79C31A7BE7E20027B946 /* SWResponse.h */,
-				32FE79C41A7BE7E20027B946 /* SWResponse.m */,
-				32FE79C01A7BE7E20027B946 /* SWQuestion.h */,
-				32FE79C11A7BE7E20027B946 /* SWQuestion.m */,
-				32FE79BD1A7BE7E20027B946 /* SWAnswer.h */,
-				32FE79BE1A7BE7E20027B946 /* SWAnswer.m */,
+				32CFA05D1A7F930600A7A78D /* SWAnswer.h */,
+				32CFA05E1A7F930600A7A78D /* SWAnswer.m */,
+				32CFA05A1A7F930500A7A78D /* SWResult.h */,
+				32CFA05B1A7F930500A7A78D /* SWResult.m */,
+				32CFA0571A7F930500A7A78D /* SWResponse.h */,
+				32CFA0581A7F930500A7A78D /* SWResponse.m */,
+				32CFA0541A7F930500A7A78D /* SWQuestion.h */,
+				32CFA0551A7F930500A7A78D /* SWQuestion.m */,
+				32CFA0511A7F930500A7A78D /* SWScore.h */,
+				32CFA0521A7F930500A7A78D /* SWScore.m */,
+				32CFA04E1A7F930500A7A78D /* SWResultTimingEvent.h */,
+				32CFA04F1A7F930500A7A78D /* SWResultTimingEvent.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -470,21 +475,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32FE79C81A7BE7E20027B946 /* SWResultTimingEvent.m in Sources */,
 				32CFA04A1A7F7F7300A7A78D /* UserResult.m in Sources */,
 				89347A3C1A7D373E008FAA53 /* QuestionDataSource.m in Sources */,
 				32FE79C51A7BE7E20027B946 /* SWResponse.m in Sources */,
+				32CFA0531A7F930500A7A78D /* SWScore.m in Sources */,
 				32FE79E21A7F68DC0027B946 /* DPDataMapper.m in Sources */,
 				328ECBBF1A7BDA670059FACC /* ContextProvider.m in Sources */,
+				32CFA0501A7F930500A7A78D /* SWResultTimingEvent.m in Sources */,
 				328ECBC81A7BDD080059FACC /* ApiClient.m in Sources */,
-				32FE79CB1A7BE7E20027B946 /* SWResult.m in Sources */,
 				328ECB941A7BD6010059FACC /* ViewController.m in Sources */,
 				89347A421A7F6AF1008FAA53 /* PlaceholderView.m in Sources */,
 				328ECB911A7BD6010059FACC /* AppDelegate.m in Sources */,
 				32FE79E51A7F69C80027B946 /* SynchronizationService.m in Sources */,
 				32FE79C21A7BE7E20027B946 /* SWQuestion.m in Sources */,
 				89347A2F1A7D2C28008FAA53 /* AnswerCollectionViewCell.m in Sources */,
+				32CFA0561A7F930500A7A78D /* SWQuestion.m in Sources */,
 				328ECBC51A7BDC670059FACC /* Model.xcdatamodeld in Sources */,
+				32CFA0591A7F930500A7A78D /* SWResponse.m in Sources */,
+				32CFA05F1A7F930600A7A78D /* SWAnswer.m in Sources */,
 				328ECBC11A7BDA670059FACC /* DataStorageRequestBuilder.m in Sources */,
 				89347A361A7D33F5008FAA53 /* QuestionHeaderView.m in Sources */,
 				328ECB8E1A7BD6010059FACC /* main.m in Sources */,
@@ -492,6 +500,7 @@
 				32FE79E81A7F6E440027B946 /* QuestionsMapper.m in Sources */,
 				328ECBB51A7BD9580059FACC /* EventSynchronizationService.m in Sources */,
 				328ECBC01A7BDA670059FACC /* DataStorage.m in Sources */,
+				32CFA05C1A7F930500A7A78D /* SWResult.m in Sources */,
 				32CFA0451A7F7AA000A7A78D /* ApiClient+Result.m in Sources */,
 				89347A3F1A7D3FBD008FAA53 /* QuestionCollectionViewLayout.m in Sources */,
 				32FE79BF1A7BE7E20027B946 /* SWAnswer.m in Sources */,

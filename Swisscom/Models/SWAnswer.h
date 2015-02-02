@@ -8,7 +8,7 @@
 @property (nonatomic, retain) NSNumber * answerId;
 @property (nonatomic, retain) NSString * image;
 @property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) SWQuestion *qustion;
-@property (nonatomic, retain) NSData *imageData;
+@property (nonatomic, retain) NSData * imageData;
+@property (nonatomic, retain) SWQuestion *question;
 
 @end

@@ -5,14 +5,15 @@
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="qustion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SWQuestion" inverseName="answers" inverseEntity="SWQuestion" syncable="YES"/>
+        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SWQuestion" inverseName="answers" inverseEntity="SWQuestion" syncable="YES"/>
     </entity>
     <entity name="SWQuestion" representedClassName="SWQuestion" syncable="YES">
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="qustionId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="answers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SWAnswer" inverseName="qustion" inverseEntity="SWAnswer" syncable="YES"/>
+        <relationship name="answers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SWAnswer" inverseName="question" inverseEntity="SWAnswer" syncable="YES"/>
+        <relationship name="score" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SWScore" inverseName="question" inverseEntity="SWScore" syncable="YES"/>
     </entity>
     <entity name="SWResponse" representedClassName="SWResponse" syncable="YES">
         <attribute name="answerId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -27,6 +28,12 @@
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="result" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SWResult" inverseName="timingEvent" inverseEntity="SWResult" syncable="YES"/>
     </entity>
+    <entity name="SWScore" representedClassName="SWScore" syncable="YES">
+        <attribute name="max" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="min" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SWQuestion" inverseName="score" inverseEntity="SWQuestion" syncable="YES"/>
+    </entity>
     <configuration name="AutorizationUser"/>
     <configuration name="UnAutorizationUser">
         <memberEntity name="SWResponse"/>
@@ -34,12 +41,14 @@
         <memberEntity name="SWResult"/>
         <memberEntity name="SWResultTimingEvent"/>
         <memberEntity name="SWAnswer"/>
+        <memberEntity name="SWScore"/>
     </configuration>
     <elements>
         <element name="SWAnswer" positionX="34" positionY="18" width="128" height="118"/>
-        <element name="SWQuestion" positionX="-173" positionY="18" width="128" height="118"/>
+        <element name="SWQuestion" positionX="-173" positionY="18" width="128" height="133"/>
         <element name="SWResponse" positionX="63" positionY="135" width="128" height="88"/>
         <element name="SWResult" positionX="-171" positionY="162" width="128" height="73"/>
         <element name="SWResultTimingEvent" positionX="-47" positionY="296" width="128" height="73"/>
+        <element name="SWScore" positionX="-54" positionY="171" width="128" height="103"/>
     </elements>
 </model>
