@@ -20,6 +20,9 @@
 		328ECBC11A7BDA670059FACC /* DataStorageRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBBE1A7BDA670059FACC /* DataStorageRequestBuilder.m */; };
 		328ECBC51A7BDC670059FACC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBC31A7BDC670059FACC /* Model.xcdatamodeld */; };
 		328ECBC81A7BDD080059FACC /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 328ECBC71A7BDD080059FACC /* ApiClient.m */; };
+		32CFA0451A7F7AA000A7A78D /* ApiClient+Result.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CFA0441A7F7AA000A7A78D /* ApiClient+Result.m */; };
+		32CFA0471A7F7D1200A7A78D /* Results.json in Resources */ = {isa = PBXBuildFile; fileRef = 32CFA0461A7F7D0B00A7A78D /* Results.json */; };
+		32CFA04A1A7F7F7300A7A78D /* UserResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CFA0491A7F7F7300A7A78D /* UserResult.m */; };
 		32FE79BF1A7BE7E20027B946 /* SWAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79BE1A7BE7E20027B946 /* SWAnswer.m */; };
 		32FE79C21A7BE7E20027B946 /* SWQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79C11A7BE7E20027B946 /* SWQuestion.m */; };
 		32FE79C51A7BE7E20027B946 /* SWResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79C41A7BE7E20027B946 /* SWResponse.m */; };
@@ -70,6 +73,11 @@
 		328ECBC41A7BDC670059FACC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		328ECBC61A7BDD080059FACC /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
 		328ECBC71A7BDD080059FACC /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
+		32CFA0431A7F7AA000A7A78D /* ApiClient+Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ApiClient+Result.h"; sourceTree = "<group>"; };
+		32CFA0441A7F7AA000A7A78D /* ApiClient+Result.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ApiClient+Result.m"; sourceTree = "<group>"; };
+		32CFA0461A7F7D0B00A7A78D /* Results.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Results.json; sourceTree = "<group>"; };
+		32CFA0481A7F7F7300A7A78D /* UserResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserResult.h; sourceTree = "<group>"; };
+		32CFA0491A7F7F7300A7A78D /* UserResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserResult.m; sourceTree = "<group>"; };
 		32FE79BD1A7BE7E20027B946 /* SWAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWAnswer.h; sourceTree = "<group>"; };
 		32FE79BE1A7BE7E20027B946 /* SWAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWAnswer.m; sourceTree = "<group>"; };
 		32FE79C01A7BE7E20027B946 /* SWQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQuestion.h; sourceTree = "<group>"; };
@@ -154,6 +162,8 @@
 				328ECB901A7BD6010059FACC /* AppDelegate.m */,
 				328ECB921A7BD6010059FACC /* ViewController.h */,
 				328ECB931A7BD6010059FACC /* ViewController.m */,
+				32CFA0481A7F7F7300A7A78D /* UserResult.h */,
+				32CFA0491A7F7F7300A7A78D /* UserResult.m */,
 				328ECB951A7BD6010059FACC /* Main.storyboard */,
 				328ECB981A7BD6010059FACC /* Images.xcassets */,
 				328ECB9A1A7BD6010059FACC /* LaunchScreen.xib */,
@@ -197,6 +207,8 @@
 				328ECBC71A7BDD080059FACC /* ApiClient.m */,
 				32FE79DB1A7F62130027B946 /* ApiClient+Question.h */,
 				32FE79DC1A7F62130027B946 /* ApiClient+Question.m */,
+				32CFA0431A7F7AA000A7A78D /* ApiClient+Result.h */,
+				32CFA0441A7F7AA000A7A78D /* ApiClient+Result.m */,
 				32FE79E31A7F69C80027B946 /* SynchronizationService.h */,
 				32FE79E41A7F69C80027B946 /* SynchronizationService.m */,
 			);
@@ -247,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				32FE79CD1A7F5E250027B946 /* Questions.json */,
+				32CFA0461A7F7D0B00A7A78D /* Results.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -355,6 +368,7 @@
 			files = (
 				328ECB971A7BD6010059FACC /* Main.storyboard in Resources */,
 				328ECB9C1A7BD6010059FACC /* LaunchScreen.xib in Resources */,
+				32CFA0471A7F7D1200A7A78D /* Results.json in Resources */,
 				32FE79DE1A7F645E0027B946 /* Questions.json in Resources */,
 				328ECB991A7BD6010059FACC /* Images.xcassets in Resources */,
 			);
@@ -408,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32FE79C81A7BE7E20027B946 /* SWResultTimingEvent.m in Sources */,
+				32CFA04A1A7F7F7300A7A78D /* UserResult.m in Sources */,
 				32FE79C51A7BE7E20027B946 /* SWResponse.m in Sources */,
 				32FE79E21A7F68DC0027B946 /* DPDataMapper.m in Sources */,
 				328ECBBF1A7BDA670059FACC /* ContextProvider.m in Sources */,
@@ -424,6 +439,7 @@
 				32FE79E81A7F6E440027B946 /* QuestionsMapper.m in Sources */,
 				328ECBB51A7BD9580059FACC /* EventSynchronizationService.m in Sources */,
 				328ECBC01A7BDA670059FACC /* DataStorage.m in Sources */,
+				32CFA0451A7F7AA000A7A78D /* ApiClient+Result.m in Sources */,
 				32FE79BF1A7BE7E20027B946 /* SWAnswer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

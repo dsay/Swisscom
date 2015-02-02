@@ -6,6 +6,8 @@
 #import "Singleton.h"
 #import "ApiClient.h"
 
+#import "ApiClient+Result.h"
+
 @interface EventSynchronizationService ()
 
 @property (strong) Reachability *reachability;
@@ -92,51 +94,45 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(EventSynchronizationService)
         });
 	};
     
+    [self syncReportsProcessingBlock:ProcessingBlock];
 }
 
-//- (void)syncReportsProcessingBlock:(void (^)(NSInteger))ProcessingBlock
-//{
-//    NSManagedObjectContext *context = [[BBDataStorage shared].contextProvider createTemporaryContext];
-//
-//    ProcessingBlock(+1);
-//    [context performBlock:^{
-//        NSError *error;
-//        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"ReportTimingEvent"];
-//        NSArray *reportTimingEvents = [context executeFetchRequest:request error:&error];
-//        NSAssert(error == nil, @"Cannot fetch events for syncing: %@",error);
-//        
-//        for (NSManagedObject *report in reportTimingEvents)
-//        {
-//            NSManagedObjectID *objectID = report.objectID;
-//            
-//            NSDictionary *params = [report valueForKey:@"reportParameters"];
-//            [[BabylonApp2ApiClient shared]POST:@"mobile/triage/result/symptom/create"
-//                           parameters:params
-//            constructingBodyWithBlock:nil
-//                             success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//                                 if (operation.response.statusCode == 200)
-//                                 {
-//                                     [context performBlock:^{
-//                                         NSManagedObject *report = [context objectWithID:objectID];
-//                                         [context deleteObject:report];
-//                                         
-//                                         NSError *error;
-//                                         [context save:&error];
-//                                         
-//                                         ProcessingBlock(-1);
-//                                     }];
-//                                 }
-//                                 else
-//                                 {
-//                                     ProcessingBlock(-1);
-//                                 }
-//                             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//                                 ProcessingBlock(-1);
-//                             }];
-//            ProcessingBlock(+1);
-//        }
-//        ProcessingBlock(-1);
-//    }];
-//}
+- (void)syncReportsProcessingBlock:(void (^)(NSInteger))ProcessingBlock
+{
+    NSManagedObjectContext *context = [[DataStorage shared].contextProvider createTemporaryContext];
+    
+    ProcessingBlock(+1);
+    [context performBlock:^{
+        NSError *error;
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"SWResultTimingEvent"];
+        NSArray *reportTimingEvents = [context executeFetchRequest:request error:&error];
+        NSAssert(error == nil, @"Cannot fetch events for syncing: %@",error);
+        
+        NSArray *results = [reportTimingEvents valueForKey:@"result"];
+        NSArray *IDs = [reportTimingEvents valueForKey:@"objectID"];
+        if (results.count > 0)
+        {
+            ProcessingBlock(+1);
+            [self.apiClient uploadResults:results completion:^(NSDictionary *dict, NSString *error) {
+                if (dict && !error)
+                {
+                    [context performBlock:^{
+                        for (NSManagedObjectID *objectId in IDs)
+                        {
+                            NSManagedObject *report = [context objectWithID:objectId];
+                            [context deleteObject:report];
+                        }
+                        NSError *error;
+                        [context save:&error];
+                        
+                        ProcessingBlock(-1);
+                    }];
+                }
+                else ProcessingBlock(-1);
+            }];
+        }
+        ProcessingBlock(-1);
+    }];
+}
 
 @end
