@@ -1,61 +1,58 @@
 #import "ApiClient.h"
-#import "Singleton.h"
+#import "DPDataMapper.h"
+
+static NSString * const kBaseURL = @"http://www.swisscom.com";
+static NSString * const kStatus = @"status";
+static NSString * const kData = @"data";
 
 @implementation ApiClient
 
-SYNTHESIZE_SINGLETON_FOR_CLASS(ApiClient)
-
 - (instancetype)init
 {
-    if (self = [super initWithBaseURL:[NSURL URLWithString:@""]]) {
-        self.requestSerializer = [AFJSONRequestSerializer serializer];
-        self.responseSerializer = [AFHTTPResponseSerializer serializer];
-        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    if (self = [super init])
+    {
+        NSURL *baseURL = [NSURL URLWithString:kBaseURL];
+        _manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL];
+        _manager.requestSerializer = [AFJSONRequestSerializer serializer];
+        _manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        [_manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+
     }
     return self;
 }
 
-- (void)cancelOperation:(AFHTTPRequestOperation *)operation
+- (void)handleResponse:(id)responseObject complete:(completionBlock)completion
 {
-    NSAssert(operation != nil, @"Not setup for HTTP Request Operation");
-    if (!operation)
-        return;
-
-    if (operation.isCancelled) return;
+    DPDataMapper *mapper = [DPDataMapper new];
+    [mapper setResponse:responseObject];
     
-    [operation cancel];
+    if ([[mapper stringFromKey:kStatus] isEqualToString:@"OK"])
+    {
+        if ([mapper dictionaryForKey:kData])
+        {
+            completion([mapper dictionaryForKey:kData], nil);
+        }
+        else
+        {
+            completion(nil, @"Error not valid data !");
+        }
+    }
+    else
+    {
+        completion(nil, @"Error not valid data !");
+    }
+#if DEBUG
+    NSLog(@"Server response:%@", responseObject);
+#endif
 }
 
-#pragma mark - Base requests
-
-+ (void)handleResponse:(id)responseObject complete:(completionBlock)block
+- (void)handleError:(NSError *)error complete:(completionBlock)completion
 {
-    if (responseObject == nil) block(@"Error - no response", nil, 500);
-    block(@"", responseObject, 200);
-}
-
-+ (AFHTTPRequestOperation *)POST:(NSString *)postPath parameters:(NSDictionary *)params complete:(completionBlock)block
-{
-    ApiClient *client = [ApiClient shared];
-    return [client POST:postPath parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject){
-        [self handleResponse:responseObject complete:block];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        [self handleResponse:operation.responseObject complete:block];
-    }];
-}
-
-
-+ (AFHTTPRequestOperation *)GET:(NSString *)getPath parameters:(NSDictionary *)params complete:(completionBlock)block
-{
-    ApiClient *client = [ApiClient shared];
-   return [client GET:getPath parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        [self handleResponse:responseObject complete:block];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        [self handleResponse:operation.responseObject complete:block];
-    }];
+    completion(nil, error.localizedDescription);
+    
+#if DEBUG
+    NSLog(@"Server error:%@", error);
+#endif
 }
 
 @end

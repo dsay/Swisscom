@@ -25,6 +25,10 @@
 		32FE79C51A7BE7E20027B946 /* SWResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79C41A7BE7E20027B946 /* SWResponse.m */; };
 		32FE79C81A7BE7E20027B946 /* SWResultTimingEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79C71A7BE7E20027B946 /* SWResultTimingEvent.m */; };
 		32FE79CB1A7BE7E20027B946 /* SWResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79CA1A7BE7E20027B946 /* SWResult.m */; };
+		32FE79DD1A7F62130027B946 /* ApiClient+Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79DC1A7F62130027B946 /* ApiClient+Question.m */; };
+		32FE79DE1A7F645E0027B946 /* Questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 32FE79CD1A7F5E250027B946 /* Questions.json */; };
+		32FE79E21A7F68DC0027B946 /* DPDataMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79E11A7F68DC0027B946 /* DPDataMapper.m */; };
+		32FE79E51A7F69C80027B946 /* SynchronizationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE79E41A7F69C80027B946 /* SynchronizationService.m */; };
 		89D1EE16A400FE72AD707321 /* libPods-Swisscom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C5C2CF30E166BD9380F861 /* libPods-Swisscom.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +79,13 @@
 		32FE79C71A7BE7E20027B946 /* SWResultTimingEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWResultTimingEvent.m; sourceTree = "<group>"; };
 		32FE79C91A7BE7E20027B946 /* SWResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWResult.h; sourceTree = "<group>"; };
 		32FE79CA1A7BE7E20027B946 /* SWResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWResult.m; sourceTree = "<group>"; };
+		32FE79CD1A7F5E250027B946 /* Questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Questions.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
+		32FE79DB1A7F62130027B946 /* ApiClient+Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ApiClient+Question.h"; sourceTree = "<group>"; };
+		32FE79DC1A7F62130027B946 /* ApiClient+Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ApiClient+Question.m"; sourceTree = "<group>"; };
+		32FE79E01A7F68DC0027B946 /* DPDataMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDataMapper.h; sourceTree = "<group>"; };
+		32FE79E11A7F68DC0027B946 /* DPDataMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDataMapper.m; sourceTree = "<group>"; };
+		32FE79E31A7F69C80027B946 /* SynchronizationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynchronizationService.h; sourceTree = "<group>"; };
+		32FE79E41A7F69C80027B946 /* SynchronizationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynchronizationService.m; sourceTree = "<group>"; };
 		75A5EE3817BEC3B48B5C2964 /* Pods-Swisscom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swisscom.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swisscom/Pods-Swisscom.release.xcconfig"; sourceTree = "<group>"; };
 		7DBE39FD7370043E631BDB30 /* Pods-Swisscom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swisscom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swisscom/Pods-Swisscom.debug.xcconfig"; sourceTree = "<group>"; };
 		D8C5C2CF30E166BD9380F861 /* libPods-Swisscom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Swisscom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +141,8 @@
 		328ECB8A1A7BD6010059FACC /* Swisscom */ = {
 			isa = PBXGroup;
 			children = (
+				32FE79DF1A7F68DC0027B946 /* Mapper */,
+				32FE79CC1A7F5DF90027B946 /* Resources */,
 				328ECBC21A7BDC5D0059FACC /* Models */,
 				328ECBB61A7BD9EA0059FACC /* Utils */,
 				328ECBB21A7BD9240059FACC /* DataBase */,
@@ -175,10 +188,14 @@
 		328ECBB11A7BD91D0059FACC /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				328ECBC61A7BDD080059FACC /* ApiClient.h */,
-				328ECBC71A7BDD080059FACC /* ApiClient.m */,
 				328ECBB31A7BD9580059FACC /* EventSynchronizationService.h */,
 				328ECBB41A7BD9580059FACC /* EventSynchronizationService.m */,
+				328ECBC61A7BDD080059FACC /* ApiClient.h */,
+				328ECBC71A7BDD080059FACC /* ApiClient.m */,
+				32FE79DB1A7F62130027B946 /* ApiClient+Question.h */,
+				32FE79DC1A7F62130027B946 /* ApiClient+Question.m */,
+				32FE79E31A7F69C80027B946 /* SynchronizationService.h */,
+				32FE79E41A7F69C80027B946 /* SynchronizationService.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -221,6 +238,23 @@
 				32FE79BE1A7BE7E20027B946 /* SWAnswer.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		32FE79CC1A7F5DF90027B946 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32FE79CD1A7F5E250027B946 /* Questions.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		32FE79DF1A7F68DC0027B946 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				32FE79E01A7F68DC0027B946 /* DPDataMapper.h */,
+				32FE79E11A7F68DC0027B946 /* DPDataMapper.m */,
+			);
+			path = Mapper;
 			sourceTree = "<group>";
 		};
 		A336AF8635DB0B4B89908E1E /* Pods */ = {
@@ -316,6 +350,7 @@
 			files = (
 				328ECB971A7BD6010059FACC /* Main.storyboard in Resources */,
 				328ECB9C1A7BD6010059FACC /* LaunchScreen.xib in Resources */,
+				32FE79DE1A7F645E0027B946 /* Questions.json in Resources */,
 				328ECB991A7BD6010059FACC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,15 +404,18 @@
 			files = (
 				32FE79C81A7BE7E20027B946 /* SWResultTimingEvent.m in Sources */,
 				32FE79C51A7BE7E20027B946 /* SWResponse.m in Sources */,
+				32FE79E21A7F68DC0027B946 /* DPDataMapper.m in Sources */,
 				328ECBBF1A7BDA670059FACC /* ContextProvider.m in Sources */,
 				328ECBC81A7BDD080059FACC /* ApiClient.m in Sources */,
 				32FE79CB1A7BE7E20027B946 /* SWResult.m in Sources */,
 				328ECB941A7BD6010059FACC /* ViewController.m in Sources */,
 				328ECB911A7BD6010059FACC /* AppDelegate.m in Sources */,
+				32FE79E51A7F69C80027B946 /* SynchronizationService.m in Sources */,
 				32FE79C21A7BE7E20027B946 /* SWQuestion.m in Sources */,
 				328ECBC51A7BDC670059FACC /* Model.xcdatamodeld in Sources */,
 				328ECBC11A7BDA670059FACC /* DataStorageRequestBuilder.m in Sources */,
 				328ECB8E1A7BD6010059FACC /* main.m in Sources */,
+				32FE79DD1A7F62130027B946 /* ApiClient+Question.m in Sources */,
 				328ECBB51A7BD9580059FACC /* EventSynchronizationService.m in Sources */,
 				328ECBC01A7BDA670059FACC /* DataStorage.m in Sources */,
 				32FE79BF1A7BE7E20027B946 /* SWAnswer.m in Sources */,

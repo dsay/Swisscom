@@ -1,24 +1,14 @@
-#import <AFNetworking/AFHTTPRequestOperationManager.h>
+#import <AFNetworking/AFNetworking.h>
 
 #define kMaxConcurrentOperationCount 5
 
-typedef  void (^completionBlock)(NSString *error, NSDictionary  *dict, NSInteger statusCode) ;
-typedef  void (^completionFileBlock)(NSString *error, NSData * data) ;
+typedef  void (^completionBlock)(NSDictionary *dict, NSString *error);
 
-@interface ApiClient : AFHTTPRequestOperationManager
+@interface ApiClient : NSObject
 
-+ (ApiClient *)shared;
+@property (nonatomic, strong) AFHTTPRequestOperationManager *manager;
 
-- (void)cancelOperation:(AFHTTPRequestOperation *)operation;
-
-+ (AFHTTPRequestOperation *)GET:(NSString *)getPath
-                      parameters:(NSDictionary *)params
-                        complete:(completionBlock)block;
-
-+ (AFHTTPRequestOperation *)POST:(NSString *)postPath
-                      parameters:(NSDictionary *)params
-                        complete:(completionBlock)block;
-
-+ (void)handleResponse:(id)responseObject complete:(completionBlock)block;
+- (void)handleResponse:(id)responseObject complete:(completionBlock)completion;
+- (void)handleError:(NSError *)error complete:(completionBlock)completion;
 
 @end

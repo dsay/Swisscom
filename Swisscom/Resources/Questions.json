@@ -1,0 +1,105 @@
+{
+    "status" : "OK",
+    "data" : {
+        "qustins":[
+                   {
+                   "id": 1,
+                   "title": "Question 1 over here...",
+                   "image": "",
+                   "answers": [
+                               {
+                               "id": 1,
+                               "title": "Like",
+                               "image": "https://s3.eu-central-1.amazonaws.com/mdp-questions/q1_a1.png"
+                               },
+                               {
+                               "id": 2,
+                               "title": "So-so",
+                               "image": "https://s3.eu-central-1.amazonaws.com/mdp-questions/q1_a2.png"
+                               },
+                               {
+                               "id": 3,
+                               "title": "Don't Like",
+                               "image": "https://s3.eu-central-1.amazonaws.com/mdp-questions/q1_a3.png"
+                               },
+                               {
+                               "id": 4,
+                               "title": "Doesnt metter",
+                               "image": "https://s3.eu-central-1.amazonaws.com/mdp-questions/q1_a4.png"
+                               }
+                               ]
+                   },
+                   {
+                   "id": 2,
+                   "title": "Question 2 over here...",
+                   "image": "https://s3.eu-central-1.amazonaws.com/mdp-questions/q2.png",
+                   "answers": [
+                               {
+                               "id": 5,
+                               "title": "Less then 1/3",
+                               "image": ""
+                               },
+                               {
+                               "id": 6,
+                               "title": "Less then 2/3",
+                               "image": ""
+                               },
+                               {
+                               "id": 7,
+                               "title": "Over 2/3",
+                               "image": ""
+                               }
+                               ]
+                   },
+                   {
+                   "id": 3,
+                   "title": "Question 3 over here...",
+                   "image": "https://s3.eu-central-1.amazonaws.com/mdp-questions/q3.png",
+                   "answers": [
+                               {
+                               "id": 8,
+                               "title": "Answer Left",
+                               "image": ""
+                               },
+                               {
+                               "id": 9,
+                               "title": "Answer Center",
+                               "image": ""
+                               },
+                               {
+                               "id": 10,
+                               "title": "Answer Right",
+                               "image": ""
+                               }
+                               ]
+                   },
+                   {
+                   "id": 4,
+                   "title": "Question 4 over here...",
+                   "image": "https://s3.eu-central-1.amazonaws.com/mdp-questions/q4.png",
+                   "answers": [
+                               {
+                               "id": 11,
+                               "title": "Answer 1",
+                               "image": ""
+                               },
+                               {
+                               "id": 12,
+                               "title": "Answer 2",
+                               "image": ""
+                               },
+                               {
+                               "id": 13,
+                               "title": "Answer 3",
+                               "image": ""
+                               },
+                               {
+                               "id": 14,
+                               "title": "Answer 4",
+                               "image": ""
+                               }
+                               ]
+                   }
+                   ]
+    }
+}

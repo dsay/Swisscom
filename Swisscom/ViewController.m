@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "ApiClient+Question.h"
 @interface ViewController ()
 
 @end
@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[ApiClient shared] questionsCompletion:^(NSDictionary *dict, NSString *error) {
+        
+    }];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

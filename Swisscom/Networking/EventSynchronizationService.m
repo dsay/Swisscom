@@ -38,7 +38,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(EventSynchronizationService)
 {
 	self.is_need_sync = NO;
     
-	[[ApiClient shared].operationQueue cancelAllOperations];
+	[self.apiClient.manager.operationQueue cancelAllOperations];
 	[self.reachability stopNotifier];
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
