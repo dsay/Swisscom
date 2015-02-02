@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="JQ9-0k-0es" customClass="PlaceholderView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="td3-6q-Gvz">
+                    <rect key="frame" x="279" y="264" width="43.5" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="FJ0-9q-ArP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsE-iH-PCp">
+                    <rect key="frame" x="281" y="316" width="37.5" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="r8o-uQ-U6b"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="LrJ-pE-15Z">
+                    <rect key="frame" x="281.5" y="281.5" width="37" height="37"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="0.071103218999999995" green="0.068513260549999996" blue="0.1360619109" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="LrJ-pE-15Z" secondAttribute="centerX" id="Dfn-99-9TU"/>
+                <constraint firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="td3-6q-Gvz" secondAttribute="centerY" constant="25" id="F10-WN-smE"/>
+                <constraint firstItem="HsE-iH-PCp" firstAttribute="top" secondItem="td3-6q-Gvz" secondAttribute="bottom" constant="31" id="Kft-7P-322"/>
+                <constraint firstAttribute="centerY" secondItem="HsE-iH-PCp" secondAttribute="centerY" constant="-25" id="OKf-dL-kar"/>
+                <constraint firstAttribute="centerX" secondItem="td3-6q-Gvz" secondAttribute="centerX" id="Wtn-Bk-jM8"/>
+                <constraint firstAttribute="centerX" secondItem="HsE-iH-PCp" secondAttribute="centerX" id="db1-ef-lHN"/>
+                <constraint firstAttribute="centerY" secondItem="LrJ-pE-15Z" secondAttribute="centerY" id="gLc-8q-TvZ"/>
+            </constraints>
+            <connections>
+                <outlet property="activityIndicator" destination="LrJ-pE-15Z" id="Snl-AD-hPr"/>
+                <outlet property="detailsTextLabel" destination="HsE-iH-PCp" id="iOb-O2-eEJ"/>
+                <outlet property="textLabel" destination="td3-6q-Gvz" id="tnz-dS-oow"/>
+            </connections>
+            <point key="canvasLocation" x="322" y="393"/>
+        </view>
+    </objects>
+</document>
