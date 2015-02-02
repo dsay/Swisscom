@@ -20,7 +20,7 @@
     [super awakeFromNib];
     
     UIView *view = [UIView new];
-    view.backgroundColor = [UIColor redColor];
+    view.backgroundColor = [UIColor colorWithRed:73./255. green:186./255. blue:247./255. alpha:1.];
     self.selectedBackgroundView = view;
 }
 

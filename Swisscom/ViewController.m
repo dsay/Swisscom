@@ -10,6 +10,7 @@
 @property (nonatomic, strong) QuestionDataSource *dataSource;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *backButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButtonItem;
+
 - (IBAction)backButtonTapHandler:(UIBarButtonItem *)sender;
 - (IBAction)nextButtonTapHanlder:(UIBarButtonItem *)sender;
 @end
