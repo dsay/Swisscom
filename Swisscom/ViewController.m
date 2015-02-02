@@ -82,6 +82,13 @@
     [self removePlaceholderView];
     self.dataSource = [[QuestionDataSource alloc] initWithQuestions:questions];
     [self.dataSource registerReusableViewsInCollectionView:self.collectionView];
+    __weak typeof(self) weakSelf = self;
+    self.dataSource.completionHandler = ^(UserResult *result) {
+        [result save];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Questionnaire rusults are saved!" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+        [weakSelf presentViewController:alertController animated:YES completion:nil];
+    };
     self.collectionView.dataSource = self.dataSource;
     self.collectionView.delegate = self.dataSource;
     [self.collectionView reloadData];
@@ -101,7 +108,6 @@
 {
     self.backButtonItem.enabled = YES;
     [self.dataSource nextQuestion];
-    [self.collectionView.collectionViewLayout invalidateLayout];
     [self.collectionView reloadData];
 }
 @end

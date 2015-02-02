@@ -16,6 +16,14 @@
 @end
 
 @implementation AnswerCollectionViewCell
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor redColor];
+    self.selectedBackgroundView = view;
+}
+
 - (void)configureWithAnswer:(SWAnswer *)answer {
     _answer = answer;
     if (self.answer.imageData) {
