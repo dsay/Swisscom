@@ -16,6 +16,8 @@
 @implementation CollectionViewLayoutInvalidationContext
 @end
 
+static CGFloat const kItemsOffset = 65.0;
+
 @interface QuestionCollectionViewLayout ()
 @property (nonatomic, strong) NSMutableDictionary *itemSizesByIndexPath;
 @property (nonatomic, strong) NSMutableDictionary *itemAttributesByIndexPath;
@@ -174,13 +176,13 @@
         NSIndexPath *ip = [NSIndexPath indexPathForItem:item inSection:indexPath.section];
         leftOffset += [self.itemSizesByIndexPath[ip] CGSizeValue].width;
     }
-    frame.origin.x = leftOffset;
+    frame.origin.x = leftOffset + kItemsOffset * indexPath.item;
     
     return frame;
 }
 
 - (CGFloat)offsetOfItemsInSection:(NSInteger)section {
-    __block CGFloat itemsWidth = 0;
+    __block CGFloat itemsWidth = kItemsOffset * ([self.collectionView numberOfItemsInSection:section] - 1);
     [self.itemSizesByIndexPath enumerateKeysAndObjectsUsingBlock:^(NSIndexPath *key, NSValue *obj, BOOL *stop) {
         if (key.section == section) {
             itemsWidth += [obj CGSizeValue].width;
